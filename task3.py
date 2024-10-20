@@ -10,7 +10,10 @@ def rimskoe_chislo(num):
     nx = (num-nm*1000-nd*500-nc*100-nl*50)//10
     nv = (num-nm*1000-nd*500-nc*100-nl*50-nx*10)//5
     ni = (num-nm*1000-nd*500-nc*100-nl*50-nx*10-nv*5)
-    print("M"*nm, "D"*nd, "C"*nc, "L"*nl, "X"*nx, "V"*nv, "I"*ni, sep='')
+    if ni == 4:
+        print("M" * nm, "D" * nd, "C" * nc, "L" * nl, "X" * nx, "V" * nv, "VI", sep='')
+    else:
+        print("M"*nm, "D"*nd, "C"*nc, "L"*nl, "X"*nx, "V"*nv, "I"*ni, sep='')
 
 
 rimskoe_chislo(int(input()))
